@@ -182,7 +182,7 @@ PrefabInstance:
     - target: {fileID: 5235922352830299506, guid: 4c82f5b9e2d5064458fae4ded025e225, type: 3}
       propertyPath: edgePatternData
       value: 
-      objectReference: {fileID: 11400000, guid: 4a999445b6ccc1f4ab34f72d71056377, type: 2}
+      objectReference: {fileID: 11400000, guid: 6f2175b7edb749c49855616e95f568f8, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
