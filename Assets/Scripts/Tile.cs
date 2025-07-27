@@ -6,7 +6,7 @@ namespace VoidScribe
     {
         private void OnMouseUp()
         {
-            transform.Rotate(Vector3.forward, 60f);
+            transform.Rotate(0f, 0f, 30f);
         }
     }
 }
