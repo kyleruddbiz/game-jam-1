@@ -6,7 +6,7 @@ namespace VoidScribe
     public class HexTile : MonoBehaviour
     {
         [Header("(Internal)")]
-        [SerializeField] private SpriteRenderer visual;
+        [SerializeField] private HexTile_Visual visual;
 
         [Header("Fields")]
         [SerializeField] private ColorSchemeData colorSchemeData;
@@ -16,21 +16,15 @@ namespace VoidScribe
 
         private void Awake()
         {
-            visual.color = colorSchemeData.BackgroundColor;
-
-            ApplyRotation();
+            visual.ApplyData(colorSchemeData, edgePatternData, veinPatternData);
+            visual.ApplyRotation(rotationIndex);
         }
 
         private void OnMouseUp()
         {
             rotationIndex = (rotationIndex + 1) % 6;
 
-            ApplyRotation();
-        }
-
-        private void ApplyRotation()
-        {
-            transform.rotation = Quaternion.Euler(0, 0, rotationIndex * -60f);
+            visual.ApplyRotation(rotationIndex);
         }
     }
 }
